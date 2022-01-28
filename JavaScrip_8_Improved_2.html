@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>improved style</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        /* here we deal with each button */
+        /*
+            document.querySelector('#red').onclick = function() {
+               document.querySelector('h1').style.color = 'red';
+            };
+
+            document.querySelector('#green').onclick = function() {
+               document.querySelector('h1').style.color = 'green';
+            };
+
+            document.querySelector('#blue').onclick = function() {
+               document.querySelector('h1').style.color = 'blue';
+            };
+
+        */
+            document.querySelectorAll('button').forEach(function(button) {
+                button.onclick = function() {
+                    document.querySelector('h1').style.color = button.dataset.color;
+                    document.querySelector('h1').style.fontSize = button.dataset.size;
+                };
+            });
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button data-color="red" data-size="60px" id="red">Red</button>
+    <button data-color="green" data-size="40px" id="green">Green</button>
+    <button data-color="blue" data-size="20px" id="blue">Blue</button>
+
+</body>
+</html>

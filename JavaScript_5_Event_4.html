@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let c = 0;
+        function count() {
+            c += 1;
+            document.querySelector('h1').innerHTML = c
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('button').onclick = count;
+        });
+
+
+    </script>
+</head>
+<body>
+    <h1>0</h1>
+    <button>Count</button>
+</body>
+</html>

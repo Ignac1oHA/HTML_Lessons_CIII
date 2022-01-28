@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event1</title>
+    <script>
+        let c = 0;
+        function count() {
+            c += 1;
+            alert(`You have clicked ${c} times`)
+        }
+        function reset() {
+            c = 0;
+            alert("You have reset the counter");
+        }
+    </script>
+</head>
+<body>
+    <h3>This is a demo for the second event</h3>
+    <button onclick="count()">Click Me!</button><br>
+    <button onclick="reset()">Reset Counter</button>
+
+</body>
+</html>
