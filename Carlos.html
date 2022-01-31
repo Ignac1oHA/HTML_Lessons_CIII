@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        p {
+            color: black;
+            font-weight: bold;
+            }
+        input[type=text] {
+            border: none;
+            border-bottom: 2px solid black;
+            }
+        input[type=email] {
+              box-sizing: border-box;
+              border: 2px solid #ccc;
+              border-radius: 2px;
+              font-size: 8px;
+              background-color: white;
+              background-image: class="fa fa-envelope";
+              background-position: 10px 10px;
+              background-repeat: no-repeat;
+              padding: 12px 20px 12px 40px;
+            }
+        textarea {
+              width: 100%;
+              height: 150px;
+              padding: 12px 20px;
+              box-sizing: border-box;
+              border: 2px solid #ccc;
+              border-radius: 4px;
+              background-color: #f8f8f8;
+              font-size: 16px;
+              resize: none;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <title>Welcome to my form!</title>
+</head>
+<body>
+<h1> Welcome to my form! I will ask you a few questions :)</h1> <br><br>
+<div><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmakeameme.org%2Fmeme%2Fdo-you-have-596694&psig=AOvVaw334FVaF6HWmk9T-kfdY8Mr&ust=1643312245818000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDHqqeV0PUCFQAAAAAdAAAAABA0" alt="Sorry, this couldn't load. It was jut a meme">
+</div>
+<form>
+    <div> What's your name?<br>
+    <input type="text" name="your name"> </div>
+     <p>Sex? </p>
+    <div>
+    <input type="radio" id="Male" name ="sex" value="Male">
+    <label for ="Male">Male</label>
+    </div>
+    <div>
+    <input type="radio" id="Female" name ="sex" value="Female">
+    <label for ="Female">Female</label>
+    </div>
+    <div>
+    <input type="radio" id="Yes" name ="sex" value="Yes">
+    <label for ="Yes">Yes, please! </label>
+    </div>
+    <p>Please, can you tell us your e-mail?</p>
+    <div>
+    <input type="email" id="email" name="email">
+        <label for="email" id="email" name="email"></label>
+    </div>
+    <p>Please, can you tell us your age?</p>
+        <div>
+        <label for="age">Age</label>
+            <select id="age" name="age">
+                <option value="<18"><18</option>
+                <option value="18-30">18-30</option>
+                <option value="31-65">31-65</option>
+                <option value=">65">>65</option>
+            </select>
+        </div>
+    <p>How are you feeling today?</p>
+            <div>
+            <textarea>I am feeling...</textarea>
+            </div>
+    <p>Is Bukele losing El Salvador and going to Mcdonald's for work?</p>
+            <div>
+            <input type="checkbox" id="yes1" value="yes1"> Yes, he is losing it <br> <input type="checkbox" id="yes2" value="yes2"> Yes, but he is going to BK <br> <input type="checkbox" id="yes3" value="yes3"> No, BTC is going to the moon! <br>
+            </div>
+    <br>
+    <div> <input type="submit" value="submit"</div>
+</form>
+</body>
+</html>
