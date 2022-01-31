@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Improved List</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.querySelector('form').onkeyup = function() {
+                if (document.querySelector('#text').value.length > 0) {
+                    document.querySelector('#submit').disabled = false;
+                } else {
+                    document.querySelector('#submit').disabled = true;
+                }
+            };
+
+            document.querySelector('form').onsubmit = function() {
+                let item = document.querySelector('#text').value;
+                console.log(item);
+                let li = document.createElement('li')
+                li.innerHTML = item;
+                document.querySelector('ol').append(li);
+                
+
+                document.querySelector('#text').value = "";
+                document.querySelector('#submit').disabled = true;
+
+                return false;
+            };
+
+        });
+    </script>
+</head>
+<body>
+    <h1>Here is my shopping list:</h1>
+    <ol></ol>
+    <form>
+        <input type="text" id="text" placeholder="Add the list item" autofocus>
+        <input type="submit" id="submit" value="Add to List" disabled="true">
+    </form>
+</body>
+</html>
