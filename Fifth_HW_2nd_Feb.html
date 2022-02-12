@@ -17,7 +17,7 @@
             document.querySelector('form').onkeyup = function() {
                 c1 = document.querySelector('#City').value
                 c2 = document.querySelector('#Name').value
-                c3 = document.querySelector('#Position').value
+                c3 = document.querySelector('#Seniority').value
                 c4 = document.querySelector('#Rate per hour').value
 
                 if (c1.length > 0 && c2.length && c3.length){
@@ -31,7 +31,7 @@
 
                 c1 = document.querySelector('#City').value;
                 c2 = document.querySelector('#Name').value;
-                c3 = document.querySelector('#Position').value;
+                c3 = document.querySelector('#Seniority').value;
                 c4 = document.querySelector('#Rate per hour').value
 
                 let tr = document.createElement('tr');
@@ -48,7 +48,7 @@
                 document.querySelector('table').append(tr);
                 document.querySelector('#City').value = "";
                 document.querySelector('#Name').value = "";
-                document.querySelector('#Position').value = "";
+                document.querySelector('#Seniority').value = "";
                 document.querySelector('#Rate per hour').value = ""
                 document.querySelector('#submit').disabled = true;
 
@@ -109,7 +109,7 @@
         <form>
         <input type="text" id="City" placeholder="City" autofocus>
         <input type="text" id="Name" placeholder="Name">
-        <input type="text" id="Position" placeholder="Position">
+        <input type="text" id="Seniority" placeholder="Seniority">
         <input type="text" id="Rate per hour" placeholder="Rate per hour">
         <input type="submit" id="submit" value="Add to Table" disabled="true">
         </form>
