@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table_Button</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+
+             document.querySelectorAll('button').forEach(function(button) {
+                button.onclick = function() {
+                    document.querySelector('table').style.border = button.dataset.border;
+                };
+            });
+
+            document.querySelector('form').onkeyup = function() {
+                c1 = document.querySelector('#City').value
+                c2 = document.querySelector('#Name').value
+                c3 = document.querySelector('#Position').value
+                c4 = document.querySelector('#Rate per hour').value
+
+                if (c1.length > 0 && c2.length && c3.length){
+                    document.querySelector('#submit').disabled = false;
+                } else {
+                    document.querySelector('#submit').disabled = true;
+                }
+            };
+
+            document.querySelector('form').onsubmit = function() {
+
+                c1 = document.querySelector('#City').value;
+                c2 = document.querySelector('#Name').value;
+                c3 = document.querySelector('#Position').value;
+                c4 = document.querySelector('#Rate per hour').value
+
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                td1.innerHTML = c1;
+                let td2 = document.createElement('td');
+                td2.innerHTML = c2;
+                let td3 = document.createElement('td');
+                td3.innerHTML = c3;
+                tr.append(td1);
+                tr.append(td2);
+                tr.append(td3);
+
+                document.querySelector('table').append(tr);
+                document.querySelector('#City').value = "";
+                document.querySelector('#Name').value = "";
+                document.querySelector('#Position').value = "";
+                document.querySelector('#Rate per hour').value = ""
+                document.querySelector('#submit').disabled = true;
+
+                return false;
+            };
+
+        });
+    </script>
+    </head>
+    <body>
+    <h1>A regular Law Firm</h1>
+    <h3>This HTML is just for educational purposes. It shows some attorneys according to their geographical location and their fees, therefore you can be aware of how massive will be the bill at the end of the month. Any coincidence is just that, a coincidence></h3>
+    <h1><iframe width="560" height="315" src="https://www.youtube.com/embed/HeERupuicHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h1>
+
+    <button data-border="3px solid red" data-size="60px" id="red">Red</button>
+    <button data-border="4px solid green" data-size="40px" id="green">Green</button>
+    <button data-border="5px solid blue" data-size="20px" id="blue">Blue</button>
+    <br>
+    <br>
+    Border Size:
+    <select>
+    <option style="display:none">Border Size</option>
+    <option data-border="10px" value="1">10px</option>
+    <option data-border="15px" value="2">15px</option>
+    <option data-border="20px" value="3">20px</option>
+    </select>
+    <br>
+    <br>
+    <table style="float: center">
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Name of lawyer</th>
+                <th>Seniority</th>
+                <th>Rate per hour</th>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td>Madrid</td>
+                <td>John Petrucci</td>
+                <td>Founding Partner</td>
+                <td>1,000USD</td>
+            </tr>
+            <tr>
+                <td>Madrid</td>
+                <td>Mike Portnoy</td>
+                <td>Junior Partner</td>
+                <td>500USD</td>
+            </tr>
+            <tr>
+                <td>Madrid</td>
+                <td>James LaBrie</td>
+                <td>Senior Associate</td>
+                <td>300USD</td>
+            </tr>
+        <h3>New lawyer in town?<h3>
+        <form>
+        <input type="text" id="City" placeholder="City" autofocus>
+        <input type="text" id="Name" placeholder="Name">
+        <input type="text" id="Position" placeholder="Position">
+        <input type="text" id="Rate per hour" placeholder="Rate per hour">
+        <input type="submit" id="submit" value="Add to Table" disabled="true">
+        </form>
+        </body>
+    </table>
+
+</body>
+</html>
