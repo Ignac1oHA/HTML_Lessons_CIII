@@ -1,6 +1,6 @@
 body
     {
-    background-color: rgba(15, 100, 50, 15);
+    background-color: rgba(000, 300, 0, 0);
     background-image
     }
 h1 {
@@ -8,20 +8,16 @@ h1 {
     text-align: center;
     font: 25px Georgia, sans-serif, font-weight: bold
 }
-
-
-table, th, td {
-  border: 1px solid black;
-}
-h1 {
+h3 {
     font-family: Helvetica;
+    text-align: center;
 }
 
 table {
-    font-size: 20pt;
-    color:#000000;
+    font-size: 10pt;
+    color:#131313;
     font-family: Helvetica;
-    margin: 15px;
+    margin: 30px;
     border: 1px solid #525252;
     }
 
@@ -32,7 +28,7 @@ th {
 
 td {
     font-size: 10pt;
-    color:#232323;
+    color:#242424;
     font-family: Helvetica;
     margin: 15px;
     border: 1px 0 #525252;

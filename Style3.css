@@ -1,25 +1,10 @@
-body
-    {
-    background-color: rgba(15, 100, 50, 15);
-    background-image
-    }
-h1 {
-    color: black;
-    text-align: center;
-    font: 25px Georgia, sans-serif, font-weight: bold
-}
-
-
-table, th, td {
-  border: 1px solid black;
-}
 h1 {
     font-family: Helvetica;
 }
 
 table {
-    font-size: 20pt;
-    color:#000000;
+    font-size: 10pt;
+    color:#525252;
     font-family: Helvetica;
     margin: 15px;
     border: 1px solid #525252;
@@ -32,7 +17,7 @@ th {
 
 td {
     font-size: 10pt;
-    color:#232323;
+    color:#525252;
     font-family: Helvetica;
     margin: 15px;
     border: 1px 0 #525252;
