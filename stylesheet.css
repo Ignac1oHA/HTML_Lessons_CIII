@@ -3,7 +3,7 @@ html * {
 }
 body
     {
-    background-color: rgba(000, 300, 0, 0);
+    background-color: rgba(100, 300, 100, 100);
     background-image
     }
 h1 {
@@ -42,4 +42,8 @@ td {
 
 #very-special {
     background-color: #c3ecd5
+}
+td, th, tr, thead, tbody {
+    border: inherit;
+   }
 }
